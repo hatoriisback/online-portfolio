@@ -2,6 +2,29 @@
   text-align: center;
 }
 
+.nav {
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
+}
+
+.navbar-title {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-title:hover {
+  color: blanchedalmond;
+}
+
+.navbar-link {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.navbar-link:hover {
+  color: orange;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,6 +55,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

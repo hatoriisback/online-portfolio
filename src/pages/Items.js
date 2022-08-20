@@ -10,7 +10,7 @@ export default function Items() {
       <h1>Items Page Details</h1>
       <p>Select an item to be shown</p>
       <table>
-        <tr>
+        <tr> 
           <td>Item</td>
           <td>Action</td>
         </tr>

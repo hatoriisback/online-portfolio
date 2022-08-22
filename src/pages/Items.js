@@ -7,16 +7,18 @@ export default function Items() {
 
   return (
     <div>
-      <h1>Items Page Details</h1>
+      <h1 className="navbar-title">Items Page Details</h1>
       <p>Select an item to be shown</p>
       <table>
-        <tr> 
-          <td>Item</td>
-          <td>Action</td>
-        </tr>
-        {items.map((item) => {
-          return <ItemRow key={item.id} item={item} />;
-        })}
+        <tbody>
+          <tr>
+            <td>Item</td>
+            <td>Action</td>
+          </tr>
+          {items.map((item) => {
+            return <ItemRow key={item.id} item={item} />;
+          })}
+        </tbody>
       </table>
       <Outlet />
     </div>

@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import "./App.css";
+// import ReactDOM from "react-dom/client";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -8,6 +9,7 @@ import Contact from "./pages/Contact";
 import AboutCompany from "./pages/AboutCompany";
 import AboutMe from "./pages/AboutMe";
 import Members from "./pages/Members";
+import Member from "./pages/Member";
 import Items from "./pages/Items";
 import Item from "./pages/Item";
 
@@ -25,10 +27,10 @@ function App() {
             </Route>
             <Route path="contact" element={<Contact />} />
             <Route path="members" element={<Members />}>
-              <Route path=":memberName" element={<Members />} />
+              <Route path=":memberId" element={<Member />} />
             </Route>
             <Route path="items" element={<Items />}>
-              <Route path="members/:memberName" element={<Item />} />
+              <Route path=":itemId" element={<Item />} />
             </Route>
           </Routes>
         </div>

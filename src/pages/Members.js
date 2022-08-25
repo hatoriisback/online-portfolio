@@ -6,6 +6,7 @@
 // import { useParams } from "react-router-dom";
 import { Outlet, useNavigate } from "react-router-dom";
 import { getItems } from "../items";
+import { Link } from "react-router-dom";
 
 // // Intro + Implementasi ( Cara 1 )
 // export default function Members() {
@@ -28,12 +29,16 @@ export default function Members() {
   //   let memberName = params.memberName;
   return (
     <div>
-      <h1 className="navbar-title">Details of Character</h1>
+      <Link className="navbar-title" to="">
+        <h1>MEMBERS</h1>
+      </Link>
+
+      <h3 className="navbar-h3">Details of Character</h3>
       {/* <p>Here is the detail page of {memberName}</p> */}
       <ul>
         {members.map((member, i) => {
           return (
-            <li key={i} onClick={() => navigate(member.id)}>
+            <li className="navbar-item" key={i} onClick={() => navigate(member.id)}>
               {member.name}
             </li>
           );

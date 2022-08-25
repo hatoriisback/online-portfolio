@@ -13,10 +13,10 @@ export default function Item() {
   }
   return (
     <div>
-      <h1>Details Hero</h1>
-      <h2>ID USER: {item.id}</h2>
-      <p>Nama: {item.name}</p>
-      <p>Profesi: {item.jobdesk}</p>
+      <h1 className="navbar-title">Details Items</h1>
+      <h2 className="navbar-item">ID USER: {item.id}</h2>
+      <p  className="navbar-item">Nama: {item.name}</p>
+      <p  className="navbar-item">Profesi: {item.jobdesk}</p>
     </div>
   );
 }

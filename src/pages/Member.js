@@ -8,7 +8,9 @@ export default function Member() {
   let memberId = params.memberId;
   let member = members.find((member) => member.id === memberId);
   if (!member) {
-    return null;
+    return (
+        <></>
+    );
   }
   return (
     <div>

@@ -25,6 +25,35 @@
   color: orange;
 }
 
+.navbar-h3 {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.navbar-h3:hover {
+  color: rgb(108, 189, 85);
+}
+
+.navbar-item {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.navbar-item:hover {
+  color: rgb(120, 123, 227);
+}
+
+.navbar-itemBtn {
+  background-color: whitesmoke;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-itemBtn:hover {
+  background-color: black;
+  color: white;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

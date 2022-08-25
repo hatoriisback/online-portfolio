@@ -5,9 +5,9 @@ export default function ItemRow({ item }) {
   const navigate = useNavigate();
   return (
     <tr>
-      <td>{item.name}</td>
+      <td className="navbar-item" >{item.name}</td>
       <td>
-        <button onClick={() => navigate(`${item.id}`)}>Show Details</button>
+        <button className="navbar-itemBtn" onClick={() => navigate(`${item.id}`)}>Show Details</button>
       </td>
     </tr>
   );

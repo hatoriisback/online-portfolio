@@ -4,6 +4,7 @@ export default class About extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      page: "About",
       title: "About",
       name: "Hendy",
       city: "Jakarta, Indonesia",
@@ -11,10 +12,15 @@ export default class About extends Component {
     };
   }
 
+  componentDidMount() {
+    document.title = `${this.state.page}`;
+  }
+
   render() {
     return (
       <>
         <section className="resume-section" id="about">
+          <title>{this.state.page}</title>
           <div className="resume-section-content">
             <h1 className="mb-0">
               {this.state.title}
@@ -27,12 +33,32 @@ export default class About extends Component {
                 hendy.findme@gmail.com
               </a>
             </div>
-            <p className="lead mb-5">{this.state.desc}</p>
+            <p className="lead mb-5">
+              I am a Front End Developer and now also in SEO Specialist
+              position. I’m passionate about computer and the internet. I can
+              speak English, Indonesian, and Hakka (Traditional Chinese). I am
+              willing to learn new things, especially about anything related to
+              technology and code stuff. Moreover, I always pay attention to
+              appearance and also energetic.
+              <br/><br />
+              <q>I will never stop learning.</q>
+            </p>
+              <br />
             <div className="social-icons">
-              <a className="social-icon" href="#!">
+              <a
+                className="social-icon"
+                href="https://www.linkedin.com/in/hendy-hen/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a className="social-icon" href="#!">
+              <a
+                className="social-icon"
+                href="https://github.com/hatoriisback/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i className="fab fa-github"></i>
               </a>
               <a className="social-icon" href="#!">

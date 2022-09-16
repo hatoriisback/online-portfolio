@@ -4,6 +4,7 @@ export default class Interest extends Component {
   constructor() {
     super();
     this.state = {
+      page: "Interest",
       title: "INTEREST",
       desc: [
         {
@@ -20,11 +21,16 @@ export default class Interest extends Component {
     };
   }
 
+  componentDidMount() {
+    document.title = `${this.state.page}`;
+  }
+
   render() {
     const interests = this.state.desc;
     return (
       <>
         <section class="resume-section" id="interests">
+          <title>{this.state.page}</title>
           <h2 class="mb-5">{this.state.title}</h2>
           <div class="resume-section-content">
             {interests.map((interest, i) => {

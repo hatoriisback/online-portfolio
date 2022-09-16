@@ -4,15 +4,20 @@ export default class Home extends Component {
   constructor() {
     super();
     this.state = {
+      page: "Home",
       title: "Hendy",
       desc: "This Home Page",
     };
+  }
+  componentDidMount() {
+    document.title = `${this.state.page}`;
   }
 
   render() {
     return (
       <>
         <section className="resume-section" id="about">
+          <title>{this.state.page}</title>
           <div className="resume-section-content">
             <h1 className="mb-0">
               {this.state.title}

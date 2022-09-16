@@ -4,6 +4,7 @@ export default class Education extends Component {
   constructor(props) {
     super();
     this.state = {
+      page: "Education",
       title: "Education",
       desc: [
         {
@@ -24,11 +25,16 @@ export default class Education extends Component {
     };
   }
 
+  componentDidMount() {
+    document.title = `${this.state.page}`;
+  }
+
   render() {
     const educations = this.state.desc;
     return (
       <>
         <section class="resume-section" id="education">
+          <title>{this.state.page}</title>
           <div class="resume-section-content">
             <h2 class="mb-5">{this.state.title}</h2>
 

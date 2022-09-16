@@ -5,6 +5,7 @@ export default class Skills extends Component {
   constructor() {
     super();
     this.state = {
+      page: "Skills",
       title: "SKILLS",
       desc: [
         "HTML5",
@@ -20,11 +21,16 @@ export default class Skills extends Component {
     };
   }
 
+  componentDidMount() {
+    document.title = `${this.state.page}`;
+  }
+
   render() {
     // const skills = this.state.desc;
     return (
       <>
         <section class="resume-section" id="skills">
+          <title>{this.state.page}</title>
           <div class="resume-section-content">
             <h2 class="mb-5">Skills</h2>
             <div class="subheading mb-3">Programming Languages & Tools</div>

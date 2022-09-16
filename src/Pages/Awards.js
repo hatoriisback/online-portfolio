@@ -4,6 +4,7 @@ export default class Awards extends Component {
   constructor() {
     super();
     this.state = {
+      page: "Awards & Certifications",
       title: "Awards & Certifications",
       awards: [
         " Google Analytics Certified Developer",
@@ -13,11 +14,16 @@ export default class Awards extends Component {
     };
   }
 
+  componentDidMount() {
+    document.title = `${this.state.page}`;
+  }
+
   render() {
     const awards = this.state.awards;
     return (
       <>
         <section class="resume-section" id="awards">
+          <title>{}this.state.page</title>
           <div class="resume-section-content">
             <h2 class="mb-5">{this.state.title}</h2>
             {awards.map((award, i) => {

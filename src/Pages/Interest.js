@@ -8,14 +8,12 @@ export default class Interest extends Component {
       title: "INTEREST",
       desc: [
         {
-          interested: "Front End Laravel Development",
-          reason:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus est eu mi egestas commodo. Nullam ac nunc at magna auctor mattis sit amet a velit. Etiam vehicula elementum ligula, sed scelerisque lacus convallis congue. Nullam nulla nibh, egestas at semper non, finibus sed turpis. Phasellus sit amet turpis gravida.",
+          interested: "Program Development",
+          reason: "Hi! I like learning and would like to explore any program language if needed. Cause program languages are unique and makes me want to know more and more.",
         },
         {
-          interested: "Front End React Development",
-          reason:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus est eu mi egestas commodo. Nullam ac nunc at magna auctor mattis sit amet a velit. Etiam vehicula elementum ligula, sed scelerisque lacus convallis congue. Nullam nulla nibh, egestas at semper non, finibus sed turpis. Phasellus sit amet turpis gravida.",
+          interested: "Hardware, Software, and System Stuff",
+          reason: "This is my another hobby of hardwaring stuff. I like to fix any of electronic around me, especially any of things that related about Computer.",
         },
       ],
     };
@@ -29,22 +27,24 @@ export default class Interest extends Component {
     const interests = this.state.desc;
     return (
       <>
-        <section class="resume-section" id="interests">
+        <section className="resume-section" id="interests">
           <title>{this.state.page}</title>
-          <h2 class="mb-5">{this.state.title}</h2>
-          <div class="resume-section-content">
+          <h2 className="mb-5">{this.state.title}</h2>
+          <div className="resume-section-content">
             {interests.map((interest, i) => {
               return (
-                <div key={i}>
-                  <p>{interest.interested}</p>
-                  <p class="mb-0">{interest.reason}</p>
+                <div key={i} className="d-flex flex-column flex-md-row justify-content-between mb-5">
+                  <div className="flex-grow-1">
+                    <h3 className="mb-0">{interest.interested}</h3>
+                    <p className="mb-0">{interest.reason}</p>
+                  </div>
                   <br />
                 </div>
               );
             })}
           </div>
         </section>
-        <hr class="m-0" />
+        <hr className="m-0" />
       </>
     );
   }

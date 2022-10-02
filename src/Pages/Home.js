@@ -29,7 +29,7 @@ export default class Home extends Component {
             <p className="lead mb-5">{this.state.desc}</p>
           </div>
         </section>
-        <hr class="m-0" />
+        <hr className="m-0" />
       </>
     );
   }

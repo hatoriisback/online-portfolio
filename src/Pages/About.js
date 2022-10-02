@@ -70,7 +70,7 @@ export default class About extends Component {
             </div>
           </div>
         </section>
-        <hr class="m-0" />
+        <hr className="m-0" />
       </>
     );
   }

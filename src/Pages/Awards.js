@@ -6,11 +6,7 @@ export default class Awards extends Component {
     this.state = {
       page: "Awards & Certifications",
       title: "Awards & Certifications",
-      awards: [
-        " Google Analytics Certified Developer",
-        " Google Search Console Certified Developer",
-        "Google Ads Certified Developer",
-      ],
+      awards: [" FullStack Laravel Certified", " Frontend React & React Native Certified"],
     };
   }
 
@@ -22,25 +18,27 @@ export default class Awards extends Component {
     const awards = this.state.awards;
     return (
       <>
-        <section class="resume-section" id="awards">
+        <section className="resume-section" id="awards">
           <title>{}this.state.page</title>
-          <div class="resume-section-content">
-            <h2 class="mb-5">{this.state.title}</h2>
+          <div className="resume-section-content">
+            <h2 className="mb-5">{this.state.title}</h2>
             {awards.map((award, i) => {
               return (
-                <ul key={i} class="fa-ul mb-0">
+                <ul key={i} className="fa-ul mb-0">
                   <li>
-                    <span class="fa-li">
-                      <i class="fas fa-trophy text-warning"></i>
-                    </span>
-                    {award}
+                    <h6>
+                      <span className="fa-li">
+                        <i className="fas fa-trophy text-warning"></i>
+                      </span>
+                      {award}
+                    </h6>
                   </li>
                 </ul>
               );
             })}
           </div>
         </section>
-        <hr class="m-0" />
+        <hr className="m-0" />
       </>
     );
   }
